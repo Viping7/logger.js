@@ -5,7 +5,8 @@ var rootDir = '';
 var configData = {
     'log-level':5,
     'log-type':'console',
-    'time-stamp':false,
+    'time-stamp':true,
+    'file-path':'/logs/'
 };
 var Logs;
 module.exports.config = function(root,file){
@@ -33,22 +34,22 @@ module.exports.config = function(root,file){
 }
 
 module.exports.info = function(message, object){
-    if(configData['log-level'] > 4)
+    if(configData['log-level'] >= 4)
         initalizeLoggerProcess('info', "\x1b[34m", message, object);
 }
 
 module.exports.debug = function(message, object){
-    if(configData['log-level'] > 3)
+    if(configData['log-level'] >= 3)
         initalizeLoggerProcess('debug', "\x1b[32m", message, object);
 }
 
 module.exports.warning = function(message, object){
-    if(configData['log-level'] > 2)
+    if(configData['log-level'] >= 2)
         initalizeLoggerProcess('warning', "\x1b[33m", message, object);
 }
 
 module.exports.error = function(message, object){
-    if(configData['log-level'] > 1)
+    if(configData['log-level'] >= 1)
         initalizeLoggerProcess('error', "\x1b[31m", message,object);
 }
 
