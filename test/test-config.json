@@ -1,0 +1,7 @@
+{
+    "log-level":5,
+    "log-type":"db",
+    "time-stamp":true,
+    "file-path": "/logs/",
+    "connection-string":"mongodb://root:password7@ds121099.mlab.com:21099/quesdrop"
+}
