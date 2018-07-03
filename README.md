@@ -1,4 +1,4 @@
-# logger.js
+# advanced-node-logger
 
 A Nodejs Logger plugin, with 3 options to write logs to
 * Console
@@ -12,7 +12,7 @@ A Nodejs Logger plugin, with 3 options to write logs to
 ### Simple Usage
 
  ```
- var logger = require('logger.js')
+ var logger = require('advanced-node-logger')
  logger.info("This is an info log")
 ```
 This by defaults logs all types, info, debug, warning, error and critical and writes it in to console.
